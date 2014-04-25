@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/project_bank"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/menu_background"
+        android:orientation="horizontal" >
+
+        <!-- 列表按钮 -->
+
+        <ImageButton
+            android:id="@+id/project_navigation"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/list_button" 
+            android:contentDescription="@string/list_button" />
+        <!-- 显示一天、月日、星期几 -->
+
+        <TextView
+            android:id="@+id/project_title"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="@string/project_title"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:layout_gravity="center" />
+
+        <!-- 添加日程按钮 -->
+
+        <ImageButton
+            android:id="@+id/add_project"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/add_button"
+            android:contentDescription="@string/add_button" />
+    </LinearLayout>
+    <ListView 
+        android:id="@+id/mproject"
+        android:layout_below="@+id/project_bank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/setStartDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置开始日期" />
+
+        <TextView
+            android:id="@+id/current_startdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/setEndDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置结束日期" />
+
+        <TextView
+            android:id="@+id/current_enddate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/setStartTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置开始时间" />
+
+        <TextView
+            android:id="@+id/current_starttime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/setEndTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置结束时间" />
+
+        <TextView
+            android:id="@+id/current_endtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </TextView>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/complete"
+        android:id="@+id/settime_complete" />
+
+</LinearLayout>

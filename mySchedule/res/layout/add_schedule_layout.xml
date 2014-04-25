@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 录音按钮和编辑框 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/iu"
+        android:orientation="horizontal" >
+
+        <!-- 录音按钮 -->
+
+        <ImageButton
+            android:id="@+id/sound_recording"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/sound_record" >
+        </ImageButton>
+
+        <EditText
+            android:id="@+id/input_schedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/input_hint"
+            android:textSize="24sp" />
+    </LinearLayout>
+    <!-- 勾选事件的重要程度和紧急程度 -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <com.example.mySchedule.Mygroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/importance" >
+
+        <!-- 很重要很紧急 -->
+
+        <RadioButton
+            android:id="@+id/toiu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkMark="?android:attr/listChoiceIndicatorSingle"
+            android:text="@string/iu"
+            android:textSize="18sp" />
+        <!-- 很重要不紧急 -->
+
+        <RadioButton
+            android:id="@+id/toinu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/toiu"
+            android:layout_weight="1"
+            android:checkMark="?android:attr/listChoiceIndicatorSingle"
+            android:text="@string/inu"
+            android:textSize="18sp" />
+
+        <!-- 不重要很紧急 -->
+
+        <RadioButton
+            android:id="@+id/toniu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toiu"
+            android:layout_weight="1"
+            android:checkMark="?android:attr/listChoiceIndicatorSingle"
+            android:text="@string/niu"
+            android:textSize="18sp" />
+        <!-- 不重要不紧急 -->
+
+        <RadioButton
+            android:id="@+id/toninu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toinu"
+            android:layout_toRightOf="@+id/toniu"
+            android:layout_weight="1"
+            android:checkMark="?android:attr/listChoiceIndicatorSingle"
+            android:text="@string/ninu"
+            android:textSize="18sp" />
+    </com.example.mySchedule.Mygroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <!-- 日历链接和提醒设置 -->
+
+    <ListView
+        android:id="@+id/calendar_and_eminders"
+        android:layout_width="match_parent"
+        android:layout_height="125dp" >
+    </ListView>
+
+    <!-- 图标使用横向分布的ListView -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+
+        <ImageButton
+            android:id="@+id/repeat"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/repeat" >
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/project"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:contentDescription="@string/project" >
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/label"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/label" >
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/location"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/location" >
+        </ImageButton>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/setting_complete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/complete" />
+
+</LinearLayout>

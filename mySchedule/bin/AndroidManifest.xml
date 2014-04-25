@@ -1,0 +1,53 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myschedule"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="14" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.mySchedule.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.mySchedule.HelpActivity" >
+        </activity>
+        <activity android:name="com.example.mySchedule.ScheduleActivity" >
+        </activity>
+        <activity android:name="com.example.mySchedule.AddScheduleActivity" >
+        </activity>
+        <activity android:name="com.example.mySchedule.SetTimeActivity" >
+        </activity>
+        <activity android:name="com.example.mySchedule.SetReminderActivity" >
+        </activity>
+        <activity android:name="com.example.mySchedule.SetRepeatActivity" >
+        </activity>
+        <activity android:name="com.example.mySchedule.AddProjectActivity" >
+        </activity>
+        <activity android:name="com.example.mySchedule.AddLabelActivity" >
+        </activity>
+        <activity android:name="com.example.mySchedule.AddLocationActivity" >
+        </activity>
+        <activity android:name="com.example.mySchedule.SettingActivity" >
+        </activity>
+        <activity android:name="com.example.mySchedule.ProjectActivity" >
+        </activity>
+
+        <provider
+            android:name="com.example.mySchedule.ScheduleContentProvider"
+            android:authorities="com.example.mySchedule" >
+        </provider>
+    </application>
+
+</manifest>

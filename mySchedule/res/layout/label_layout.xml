@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/label_bank"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/menu_background"
+        android:orientation="horizontal" >
+
+        <!-- 列表按钮 -->
+
+        <ImageButton
+            android:id="@+id/label_navigation"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/list_button"
+            android:contentDescription="@string/list_button" />
+
+        <TextView
+            android:id="@+id/label_title"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/label_title"
+            android:textColor="#ffffff"
+            android:textSize="25sp" />
+
+
+        <ImageButton
+            android:id="@+id/add_project"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/add_button"
+            android:contentDescription="@string/add_button" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/mproject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/project_bank" />
+
+</RelativeLayout>
